@@ -9,7 +9,7 @@ export async function getGithubData(name: string, owner: string) {
         next: {revalidate: 3600}, // Cache for one hour
     });
 
-    if (!res.ok) throw new Error("Failed to fetch");
+    if (!res.ok) throw new Error(`Failed to fetch`);
 
     return res.json();
 }
