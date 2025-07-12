@@ -1,4 +1,5 @@
 import Typewriter from "./Typewriter";
+import Work from "./Work";
 
 export default function Landing() {
 
@@ -10,6 +11,10 @@ export default function Landing() {
             <div id="about" className="mt-10 p-2 flex flex-col items-center justify-center bg-slate-500 rounded-xl">
                 <Typewriter text={intro} speed={75} />
             </div>
+            <div>
+                <Work />
+            </div>
+
         </>
     );
 }
