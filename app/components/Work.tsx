@@ -1,6 +1,12 @@
+"use client";
+
+import { Suspense } from "react"
 import GithubDataTemplate from "./GithubApi"
-import GithubApi from "./GithubApi"
 
 export default function Work() {
-    <GithubDataTemplate />
+    return(
+        <Suspense>
+            <GithubDataTemplate />
+        </Suspense>
+    );
 }
