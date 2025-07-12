@@ -27,11 +27,12 @@ export default async function GithubDataTemplate({name, owner}: GithubData) {
     const data = await getGithubData({name, owner});
 
     return (
-        <div id="work" className="flex flex-col item-center dark:text-white text-2xl">
-            <h2>{data.name}</h2>
-            <p>{data.description}</p>
-            <p>Language: {data.language}</p>
-            <p>Clone URL: {data.git_url}</p>
+        <div id="work" className="grid grid-cols-2 item-center dark:text-white text-2xl">
+            <h2 className="p-1 m-2 text-2xl">Title: {data.name}</h2>
+            <p className="p-1 m-2">{data.description}</p>
+            <p className="p-1 m-2">Language: {data.language}</p>
+            <p className="p-1 m-2">Clone URL: {data.git_url}</p>
+            <span className="w-screen h-1 bg-slate-500"></span>
         </div>
     );
 }
