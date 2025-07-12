@@ -12,6 +12,7 @@ export default function Landing() {
                 <Typewriter text={intro} speed={75} />
             </div>
             <div>
+                <h1 className="text-2xl flex justify-center m-2 p-2">Current Work</h1>
                 <Work />
             </div>
 
