@@ -1,5 +1,5 @@
-export async function getGithubData() {
-    const res = await fetch('https://api.github.com/repos/TeejMcSteez/scrumLords', {
+export async function getGithubData(name: string, owner: string) {
+    const res = await fetch(`https://api.github.com/repos/${owner}/${name}`, {
         next: {revalidate: 3600}, // Cache for one hour
     });
 
@@ -8,8 +8,8 @@ export async function getGithubData() {
     return res.json();
 }
 
-export default async function GithubDataTemplate() {
-    const data = await getGithubData();
+export default async function GithubDataTemplate({owner, name}: {name: string, owner: string}) {
+    const data = await getGithubData(name, owner);
 
     return (
         <div id="work" className="flex flex-col item-center dark:text-white text-2xl">

@@ -6,7 +6,7 @@ import GithubDataTemplate from "./GithubApi"
 export default function Work() {
     return(
         <Suspense>
-            <GithubDataTemplate />
+            <GithubDataTemplate name="scrumLords" owner="TeejMcSteez"/>
         </Suspense>
     );
 }
