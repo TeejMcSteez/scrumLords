@@ -31,7 +31,7 @@ export default async function GithubDataTemplate({name, owner}: GithubData) {
             <h2>{data.name}</h2>
             <p>{data.description}</p>
             <p>Language: {data.language}</p>
-            <p><a href={data.git_url}>Clone Me!</a></p>
+            <p>Clone URL: {data.git_url}</p>
         </div>
     );
 }
